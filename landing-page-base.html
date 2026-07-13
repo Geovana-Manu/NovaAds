@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NovaAds — Marketing Digital para Negócios Locais</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          ink: '#14213D',
+          cream: '#FAF9F4',
+          emerald: '#06A77D',
+          amber: '#FCA311',
+          mute: '#6B7280',
+        },
+        fontFamily: {
+          display: ['"Space Grotesk"', 'sans-serif'],
+          body: ['Inter', 'sans-serif'],
+        },
+      }
+    }
+  }
+</script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', sans-serif; }
+  .font-display { font-family: 'Space Grotesk', sans-serif; }
+
+  .hero-frame {
+    clip-path: polygon(0 0, 100% 0, 100% 92%, 0% 100%);
+  }
+
+  .wa-pulse {
+    animation: wa-pulse 2.4s ease-out infinite;
+  }
+  @keyframes wa-pulse {
+    0%   { box-shadow: 0 0 0 0 rgba(6,167,125,0.45); }
+    70%  { box-shadow: 0 0 0 16px rgba(6,167,125,0); }
+    100% { box-shadow: 0 0 0 0 rgba(6,167,125,0); }
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  ::selection { background: #06A77D; color: #fff; }
+  :focus-visible { outline: 3px solid #FCA311; outline-offset: 2px; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal, .wa-pulse { animation: none !important; transition: none !important; opacity: 1 !important; transform: none !important; }
+  }
+</style>
+</head>
+<body class="bg-cream text-ink antialiased">
+
+<!-- NAVBAR -->
+<header class="sticky top-0 z-40 bg-cream/90 backdrop-blur border-b border-ink/10">
+  <nav class="max-w-6xl mx-auto flex items-center justify-between px-6 py-4">
+    <a href="#topo" class="font-display font-700 text-xl tracking-tight">
+      Nova<span class="text-emerald">Ads</span>
+    </a>
+    <div class="hidden md:flex items-center gap-8 text-sm font-medium text-ink/70">
+      <a href="#servicos" class="hover:text-ink transition-colors">Serviços</a>
+      <a href="#sobre" class="hover:text-ink transition-colors">Sobre</a>
+      <a href="#galeria" class="hover:text-ink transition-colors">Galeria</a>
+      <a href="#depoimentos" class="hover:text-ink transition-colors">Depoimentos</a>
+      <a href="#contato" class="hover:text-ink transition-colors">Contato</a>
+    </div>
+    <a href="#contato" class="bg-ink text-cream text-sm font-semibold px-5 py-2.5 rounded-full hover:bg-emerald transition-colors">
+      Fale conosco
+    </a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section id="topo" class="relative overflow-hidden">
+  <div class="max-w-6xl mx-auto px-6 pt-14 pb-24 md:pt-20 md:pb-32 grid md:grid-cols-2 gap-12 items-center">
+    <div class="reveal">
+      <span class="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-emerald bg-emerald/10 px-3 py-1.5 rounded-full">
+        Vagas abertas para julho
+      </span>
+      <h1 class="font-display font-700 text-4xl md:text-6xl leading-[1.05] mt-6">
+        Mais clientes chegando até você, todos os dias, sem depender da sorte
+      </h1>
+      <p class="text-mute text-lg mt-6 max-w-md">
+        Cuidamos das suas redes sociais, anúncios e site para que seu negócio apareça pra quem já está procurando o que você vende — sem complicação técnica da sua parte.
+      </p>
+      <div class="flex flex-wrap gap-4 mt-8">
+        <a href="#contato" class="bg-emerald text-white font-semibold px-7 py-3.5 rounded-full hover:bg-ink transition-colors shadow-lg shadow-emerald/20">
+          Quero crescer agora
+        </a>
+        <a href="#servicos" class="border border-ink/20 font-semibold px-7 py-3.5 rounded-full hover:bg-ink/5 transition-colors">
+          Ver o que fazemos
+        </a>
+      </div>
+      <div class="flex items-center gap-6 mt-10 text-sm text-mute">
+        <div><span class="font-display font-700 text-ink text-xl">+80</span> negócios atendidos</div>
+        <div><span class="font-display font-700 text-ink text-xl">3.2x</span> retorno médio em anúncios</div>
+      </div>
+    </div>
+
+    <!-- IMAGEM PRINCIPAL: troque o src abaixo pela foto real do negócio -->
+    <div class="reveal relative">
+      <div class="hero-frame bg-ink/5 aspect-[4/5] md:aspect-[4/4.5] overflow-hidden rounded-2xl">
+        <img src="/img/jcpp72-people-5667416.jpg"
+             alt="Foto do negócio ou produto em destaque"
+             class="w-full h-full object-cover">
+      </div>
+      <div class="absolute -bottom-6 -left-6 bg-white shadow-xl rounded-2xl px-5 py-4 hidden sm:block">
+        <p class="font-display font-700 text-2xl text-emerald">3 anos</p>
+        <p class="text-xs text-mute">gerando resultado</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAIXA DE CONFIANÇA -->
+<section class="border-y border-ink/10 bg-white">
+  <div class="max-w-6xl mx-auto px-6 py-6 flex flex-wrap justify-center gap-x-12 gap-y-3 text-mute text-sm font-medium">
+    <span>Gestão de redes sociais</span>
+    <span class="hidden sm:inline">•</span>
+    <span>Tráfego pago</span>
+    <span class="hidden sm:inline">•</span>
+    <span>Sites e landing pages</span>
+    <span class="hidden sm:inline">•</span>
+    <span>Relatórios mensais claros</span>
+  </div>
+</section>
+
+<!-- SERVIÇOS -->
+<section id="servicos" class="max-w-6xl mx-auto px-6 py-24">
+  <div class="reveal max-w-xl mx-auto text-center">
+    <span class="text-xs font-semibold uppercase tracking-widest text-emerald">O que oferecemos</span>
+    <h2 class="font-display font-700 text-3xl md:text-4xl mt-3">Serviços feitos para o seu problema</h2>
+  </div>
+
+  <div class="grid md:grid-cols-3 gap-6 mt-14">
+    <div class="reveal bg-white rounded-2xl p-8 border border-ink/10 hover:border-emerald/40 hover:shadow-lg transition-all">
+      <div class="w-12 h-12 rounded-xl bg-emerald/10 flex items-center justify-center text-emerald mb-5">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+      </div>
+      <h3 class="font-display font-600 text-lg">Redes sociais que vendem</h3>
+      <p class="text-mute text-sm mt-2 leading-relaxed">Conteúdo, planejamento e postagem toda semana, pensados pra transformar seguidor em cliente — não só curtida.</p>
+    </div>
+
+    <div class="reveal bg-white rounded-2xl p-8 border border-ink/10 hover:border-emerald/40 hover:shadow-lg transition-all">
+      <div class="w-12 h-12 rounded-xl bg-amber/10 flex items-center justify-center text-amber mb-5">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+      </div>
+      <h3 class="font-display font-600 text-lg">Anúncios que se pagam</h3>
+      <p class="text-mute text-sm mt-2 leading-relaxed">Campanhas no Instagram, Facebook e Google configuradas pra trazer retorno real, com o orçamento que couber no seu bolso.</p>
+    </div>
+
+    <div class="reveal bg-white rounded-2xl p-8 border border-ink/10 hover:border-emerald/40 hover:shadow-lg transition-all">
+      <div class="w-12 h-12 rounded-xl bg-ink/10 flex items-center justify-center text-ink mb-5">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
+      </div>
+      <h3 class="font-display font-600 text-lg">Site que fecha venda</h3>
+      <p class="text-mute text-sm mt-2 leading-relaxed">Landing pages rápidas, bonitas e feitas pra converter visita em contato pelo WhatsApp ou pedido direto.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SOBRE -->
+<section id="sobre" class="bg-ink text-cream">
+  <div class="max-w-6xl mx-auto px-6 py-24 grid md:grid-cols-2 gap-12 items-center">
+    <!-- IMAGEM: troque pela foto da equipe ou do espaço -->
+    <div class="reveal rounded-2xl overflow-hidden aspect-[4/3] order-2 md:order-1">
+      <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1200&auto=format&fit=crop"
+           alt="Foto da equipe ou do espaço físico"
+           class="w-full h-full object-cover">
+    </div>
+    <div class="reveal order-1 md:order-2">
+      <span class="text-xs font-semibold uppercase tracking-widest text-amber">Quem está por trás</span>
+      <h2 class="font-display font-700 text-3xl md:text-4xl mt-3">Marketing sem termo técnico, sem enrolação</h2>
+      <p class="text-cream/70 mt-5 leading-relaxed">
+        Comecei atendendo pequenos negócios da minha região que não tinham tempo nem equipe pra cuidar de marketing sozinhos. Hoje ajudo donos de negócio a entender exatamente pra onde o dinheiro do anúncio está indo — e o que ele está trazendo de volta.
+      </p>
+      <div class="grid grid-cols-3 gap-4 mt-8">
+        <div>
+          <p class="font-display font-700 text-3xl text-emerald">80+</p>
+          <p class="text-cream/60 text-xs mt-1">negócios</p>
+        </div>
+        <div>
+          <p class="font-display font-700 text-3xl text-emerald">3</p>
+          <p class="text-cream/60 text-xs mt-1">anos</p>
+        </div>
+        <div>
+          <p class="font-display font-700 text-3xl text-emerald">94%</p>
+          <p class="text-cream/60 text-xs mt-1">renovação</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALERIA -->
+<section id="galeria" class="max-w-6xl mx-auto px-6 py-24">
+  <div class="reveal max-w-xl mx-auto text-center">
+    <span class="text-xs font-semibold uppercase tracking-widest text-emerald">Galeria</span>
+    <h2 class="font-display font-700 text-3xl md:text-4xl mt-3">Alguns momentos e trabalhos</h2>
+  </div>
+
+  <!-- GRADE DE IMAGENS: troque cada src pelas fotos reais do negócio -->
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-14">
+    <div class="rounded-xl overflow-hidden aspect-square reveal">
+      <img src="https://images.unsplash.com/photo-1608222351212-18fe0ec7b13b?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Dhttps://images.unsplash.com/photo-1608222351212-18fe0ec7b13b?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Foto da galeria 1" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+    </div>
+    <div class="rounded-xl overflow-hidden aspect-square reveal">
+      <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Foto da galeria 2" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+    </div>
+    <div class="rounded-xl overflow-hidden aspect-square reveal">
+      <img src="https://images.unsplash.com/photo-1620325867502-221cfb5faa5f?q=80&w=857&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Foto da galeria 3" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+    </div>
+    <div class="rounded-xl overflow-hidden aspect-square reveal">
+      <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=600&auto=format&fit=crop" alt="Foto da galeria 4" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+    </div>
+  </div>
+</section>
+
+<!-- DEPOIMENTOS -->
+<section id="depoimentos" class="bg-white border-y border-ink/10">
+  <div class="max-w-6xl mx-auto px-6 py-24">
+    <div class="reveal max-w-xl mx-auto text-center">
+      <span class="text-xs font-semibold uppercase tracking-widest text-emerald">Depoimentos</span>
+      <h2 class="font-display font-700 text-3xl md:text-4xl mt-3">Quem já é cliente aprova</h2>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6 mt-14">
+      <div class="reveal bg-cream rounded-2xl p-7 border border-ink/10">
+        <p class="text-ink/80 text-sm leading-relaxed">"Em dois meses de anúncio bem feito, vendi mais do que em um ano tentando sozinha no Instagram." </p>
+        <div class="flex items-center gap-3 mt-6">
+          <div class="w-10 h-10 rounded-full bg-emerald/20 flex items-center justify-center font-display font-700 text-emerald">M</div>
+          <div>
+            <p class="text-sm font-semibold">Marta Ribeiro</p>
+            <p class="text-xs text-mute">Dona de loja de roupas</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="reveal bg-cream rounded-2xl p-7 border border-ink/10">
+        <p class="text-ink/80 text-sm leading-relaxed">"Finalmente entendo pra onde vai meu dinheiro de marketing. Os relatórios são simples e o resultado aparece."</p>
+        <div class="flex items-center gap-3 mt-6">
+          <div class="w-10 h-10 rounded-full bg-amber/20 flex items-center justify-center font-display font-700 text-amber">J</div>
+          <div>
+            <p class="text-sm font-semibold">João Pereira</p>
+            <p class="text-xs text-mute">Oficina mecânica</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="reveal bg-cream rounded-2xl p-7 border border-ink/10">
+        <p class="text-ink/80 text-sm leading-relaxed">"O site novo trouxe mais pedido pelo WhatsApp na primeira semana do que no mês inteiro anterior."</p>
+        <div class="flex items-center gap-3 mt-6">
+          <div class="w-10 h-10 rounded-full bg-ink/10 flex items-center justify-center font-display font-700 text-ink">A</div>
+          <div>
+            <p class="text-sm font-semibold">Ana Souza</p>
+            <p class="text-xs text-mute">Confeitaria</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section id="contato" class="max-w-6xl mx-auto px-6 py-24">
+  <div class="reveal bg-emerald rounded-3xl px-8 py-16 text-center relative overflow-hidden">
+    <h2 class="font-display font-700 text-3xl md:text-4xl text-white max-w-2xl mx-auto">
+      Bora colocar seu negócio na frente de quem já quer comprar?
+    </h2>
+    <p class="text-white/80 mt-4 max-w-md mx-auto">
+      Fale agora e receba um diagnóstico gratuito de como seu marketing está hoje — sem compromisso.
+    </p>
+    <a href="https://wa.me/5500000000000?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20mais."
+       target="_blank" rel="noopener"
+       class="inline-flex items-center gap-2 bg-white text-emerald font-semibold px-8 py-4 rounded-full mt-8 hover:bg-ink hover:text-white transition-colors">
+      Chamar no WhatsApp
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="border-t border-ink/10">
+  <div class="max-w-6xl mx-auto px-6 py-10 flex flex-col md:flex-row items-center justify-between gap-4">
+    <p class="font-display font-700">Nova<span class="text-emerald">Ads</span></p>
+    <p class="text-sm text-mute">© 2026 NovaAds. Todos os direitos reservados.</p>
+    <div class="flex gap-4 text-sm text-mute">
+      <a href="#" class="hover:text-ink transition-colors">Instagram</a>
+      <a href="#" class="hover:text-ink transition-colors">Facebook</a>
+    </div>
+  </div>
+</footer>
+
+<!-- BOTÃO FLUTUANTE DO WHATSAPP -->
+<a href="https://wa.me/5500000000000?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20mais."
+   target="_blank" rel="noopener"
+   aria-label="Falar no WhatsApp"
+   class="wa-pulse fixed bottom-6 right-6 z-50 bg-emerald text-white w-14 h-14 rounded-full flex items-center justify-center shadow-xl hover:bg-[#059669] transition-colors">
+  <svg class="w-7 h-7" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M17.6 6.32A7.85 7.85 0 0 0 12.05 4a7.94 7.94 0 0 0-6.9 11.9L4 20l4.2-1.1a7.9 7.9 0 0 0 3.85 1h.01A7.95 7.95 0 0 0 20 12.05a7.9 7.9 0 0 0-2.4-5.73Zm-5.55 12.2h-.01a6.6 6.6 0 0 1-3.36-.92l-.24-.14-2.5.65.67-2.44-.16-.25a6.6 6.6 0 1 1 12.28-3.42 6.58 6.58 0 0 1-6.68 6.52Zm3.63-4.93c-.2-.1-1.17-.58-1.35-.64-.18-.07-.31-.1-.45.1-.13.2-.51.64-.62.77-.11.13-.23.14-.43.05-.2-.1-.83-.31-1.58-.98a5.94 5.94 0 0 1-1.1-1.37c-.11-.2-.01-.3.09-.4.09-.1.2-.23.3-.35.1-.11.13-.2.2-.33.07-.13.03-.25-.02-.35-.05-.1-.45-1.08-.61-1.48-.16-.39-.33-.33-.45-.34h-.38c-.13 0-.35.05-.53.25-.18.2-.7.68-.7 1.67s.72 1.94.82 2.07c.1.13 1.41 2.15 3.42 3.02.48.21.85.33 1.14.42.48.15.92.13 1.26.08.38-.06 1.17-.48 1.34-.94.16-.46.16-.86.11-.94-.05-.09-.18-.14-.38-.24Z"/>
+  </svg>
+</a>
+
+<script>
+  // Reveal on scroll — só o básico
+  const revealEls = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+  revealEls.forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
